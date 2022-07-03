@@ -103,6 +103,6 @@ def test_decorar_relatorio():
     assert "\033[32mData de fabricação mais antiga:\033[0m" in report
     assert "\033[32mData de validade mais próxima:\033[0m" in report
     assert "\033[32mEmpresa com mais produtos:\033[0m" in report
-    assert "\033[36m2019-12-06\033[0m" in report
+    assert "\033[36m2019-09-06\033[0m" in report
     assert "\033[36m2022-09-17\033[0m" in report
     assert "\033[31mTarget Corporation\033[0m" in report
