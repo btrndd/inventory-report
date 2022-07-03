@@ -14,18 +14,18 @@ class Inventory():
                 report_reader = csv.DictReader(
                   file, delimiter=",", quotechar='"'
                   )
-                json_result = [row for row in report_reader]
-                return json_result
+                dict_result = [row for row in report_reader]
+                return dict_result
         elif (path_format == 'json'):
             with open(path) as file:
                 report_reader = file.read()
-                json_result = json.loads(report_reader)
-                return json_result
+                dict_result = json.loads(report_reader)
+                return dict_result
         elif (path_format == '.xml'):
             with open(path) as file:
                 report_reader = file.read()
-                json_result = xmltodict.parse(report_reader)
-                return json_result["dataset"]["record"]
+                dict_result = xmltodict.parse(report_reader)
+                return dict_result["dataset"]["record"]
 
     @classmethod
     def import_data(cls, path, type):
